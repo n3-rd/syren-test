@@ -1,14 +1,13 @@
 {
-  "version": 2,
-  "routes": [
+  "headers": [
     {
-      "src": "/api/token",
-      "dest": "/api/token.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, Accept, Content-Length, Origin, User-Agent",
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, HEAD, PATCH, PUT, DELETE"
-      }
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        }
+      ]
     }
   ]
 }
